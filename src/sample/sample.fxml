@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="450.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+      <TableView fx:id="tableView" editable="true" layoutX="-1.0" layoutY="-49.0" prefHeight="351.0" prefWidth="500.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <columns>
+            <TableColumn fx:id="imageNameColumn" prefWidth="270.0" text="Image" />
+            <TableColumn fx:id="progressColumn" prefWidth="133.0" text="Progress" />
+            <TableColumn fx:id="statusColumn" prefWidth="96.0" text="Status" />
+         </columns>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </opaqueInsets>
+      </TableView>
+      <Button fx:id="processButon" layoutX="436.0" layoutY="359.0" mnemonicParsing="false" onAction="#process" text="Process">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Button>
+      <Button fx:id="imagesButton" layoutX="14.0" layoutY="359.0" mnemonicParsing="false" onAction="#loadImages" text="Load images">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Button>
+      <Button fx:id="outputButton" layoutX="321.0" layoutY="359.0" mnemonicParsing="false" onAction="#chooseOutputDirectory" text="Choose output dir">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Button>
+      <Label fx:id="outputLabel" layoutX="5.0" layoutY="428.0" prefHeight="17.0" prefWidth="490.0" />
+      <Label fx:id="timeLabel" layoutX="14.0" layoutY="397.0" prefHeight="17.0" prefWidth="177.0" />
+      <ChoiceBox fx:id="kindsChoiceBox" layoutX="379.0" layoutY="393.0" prefHeight="25.0" prefWidth="107.0" />
+      <TextField fx:id="threadsField" layoutX="290.0" layoutY="393.0" prefHeight="25.0" prefWidth="85.0" promptText="Threads used" />
+      <Button fx:id="clearButton" layoutX="218.0" layoutY="360.0" mnemonicParsing="false" onAction="#clearProgress" text="Use files again" />
+</AnchorPane>
